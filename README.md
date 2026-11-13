@@ -51,6 +51,10 @@ docker build -t agent .
 docker run -p 8000:8000 --env-file .env agent
 ```
 
+Both commands passed on Linux. The smoke test loaded the frontend and checked
+`GET /health` and `POST /ask`, including tool calls, review, and a source
+citation. It used a mock model provider. [Docker smoke test](https://github.com/4ymaneBH/label-research/actions/runs/43512674936)
+
 ### Local Python
 
 With Python 3.13 and `uv` installed:
