@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Label Research</title>
+  <link rel="preload" href="/static/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/wait-art.js" defer></script>
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-content">
+      <a class="brand" href="/">Label Research</a>
+      <a class="api-link" href="/docs">API docs</a>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div class="intro">
+      <h1>Research drug labels</h1>
+      <p>Ask about a medicine or compare labels. Open a citation to read the passage behind the answer.</p>
+    </div>
+
+    <div class="workspace">
+      <section class="question-panel" aria-labelledby="question-label">
+        <form id="question-form" action="/ask" method="post">
+          <label id="question-label" for="question">Your question</label>
+          <textarea id="question" name="question" rows="4" maxlength="1500" required
+            placeholder="What do the labels say about…" aria-describedby="question-hint"></textarea>
+          <p id="question-hint" class="hint">Leave out names and other personal information.</p>
+          <button class="ask-button" type="submit">Ask question</button>
+        </form>
+
+        <div class="examples" aria-labelledby="examples-heading">
+          <h2 id="examples-heading">Try an example</h2>
+          <button type="button" data-question="Compare the contraindications listed for warfarin and apixaban. What do the labels list in common, and what differs?">
+            <span>Warfarin vs. apixaban</span><small>Compare contraindications</small>
+          </button>
+          <button type="button" data-question="What do the warfarin and sertraline labels say about bleeding risk and monitoring when the drugs are used together?">
+            <span>Warfarin and sertraline</span><small>Check bleeding risk and monitoring</small>
+          </button>
+          <button type="button" data-question="What kidney function threshold does the metformin label give as a contraindication, and how does that differ from its initiation guidance?">
+            <span>Metformin and kidney function</span><small>Find the label’s threshold</small>
+          </button>
+        </div>
+        <noscript><p>Enable JavaScript to ask a question.</p></noscript>
+      </section>
+
+      <section class="answer-panel" aria-labelledby="answer-heading" id="answer-panel">
+        <div class="answer-header">
+          <h2 id="answer-heading" tabindex="-1">Answer</h2>
+          <span id="answer-status" class="answer-status" hidden></span>
+        </div>
+        <p id="wait-announcement" class="visually-hidden" role="status"></p>
+        <p id="request-error" class="error" role="alert" hidden></p>
+        <p id="empty-answer" class="empty-answer">Ask a question to get a cited answer from the supplied labels.</p>
+        <div id="answer-loading" class="answer-loading" hidden>
+          <div class="loading-header">
+            <p id="request-status" class="request-status" aria-hidden="true"></p>
+            <span id="wait-time" class="wait-time" aria-hidden="true">0:00</span>
+          </div>
+          <canvas id="wait-art" width="760" height="248" aria-hidden="true"></canvas>
+          <button id="toggle-motion" class="motion-toggle" type="button" hidden>Pause motion</button>
+        </div>
+
+        <div id="answer-result" hidden>
+          <div id="answer-text" class="answer-text"></div>
+          <p id="answer-disclaimer" class="answer-disclaimer" hidden></p>
+
+          <section id="evidence-panel" class="evidence-panel" aria-labelledby="evidence-heading" hidden>
+            <h3 id="evidence-heading">Source passages</h3>
+            <div id="source-list"></div>
+          </section>
+
+          <div class="research-details">
+            <details>
+              <summary>Research plan</summary>
+              <ol id="plan-list"></ol>
+            </details>
+            <details>
+              <summary>Tool activity</summary>
+              <ol id="trace-list" class="trace-list"></ol>
+            </details>
+            <details>
+              <summary>Review</summary>
+              <p id="review-outcome"></p>
+              <ul id="review-list"></ul>
+            </details>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
