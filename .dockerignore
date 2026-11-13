@@ -1,0 +1,10 @@
+.git
+.env*
+assignment-pharma.pdf
+.dist
+.venv
+**/__pycache__
+.pytest_cache
+.ruff_cache
+tmp
+COMMIT_PLAN.local.md
