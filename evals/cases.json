@@ -1,0 +1,82 @@
+[
+  {
+    "id": "public-warfarin",
+    "group": "public",
+    "question": "What are the main contraindications for warfarin?",
+    "status": "answered",
+    "sources": ["dailymed-warfarin.md"],
+    "rubric": "Use section 4. Summarize the main categories and preserve the mechanical heart valve exception for pregnancy with high thromboembolic risk."
+  },
+  {
+    "id": "public-anticoagulant-comparison",
+    "group": "public",
+    "question": "Compare the contraindications of warfarin and apixaban. What conditions are shared and which are unique to each drug?",
+    "status": "answered",
+    "sources": ["dailymed-warfarin.md", "dailymed-apixaban.md"],
+    "rubric": "Use both section 4 lists. Explain the overlap in bleeding and drug-specific hypersensitivity, preserve the labels' different wording, and identify additional warfarin-listed conditions. Do not invent an apixaban-only category or imply that absence from this list means safety."
+  },
+  {
+    "id": "public-warfarin-sertraline",
+    "group": "public",
+    "question": "A patient currently on warfarin is prescribed sertraline. What is the risk of bleeding and what monitoring is recommended?",
+    "status": "answered",
+    "sources": ["dailymed-warfarin.md", "dailymed-sertraline.md"],
+    "rubric": "Identify increased bleeding risk and source-supported INR monitoring. Include more frequent INR monitoring when interacting medication starts, stops, or changes. Do not invent an exact risk percentage, fixed testing schedule, or automatic dose adjustment."
+  },
+  {
+    "id": "public-metformin",
+    "group": "public",
+    "question": "A patient with an eGFR of 25 mL/min is being considered for metformin. Is metformin contraindicated at this level of renal function, and what is the threshold?",
+    "status": "answered",
+    "sources": ["dailymed-metformin.md"],
+    "rubric": "Identify the below-30 mL/min/1.73 m² threshold and state the indexed-eGFR assumption. Separate the contraindication from the initiation restriction at 30 to 45 if discussing that range."
+  },
+  {
+    "id": "extra-brand-comparison",
+    "group": "extra",
+    "question": "According to the labels, where do the reasons to avoid Eliquis overlap with the formal contraindications for warfarin? What is listed for warfarin only?",
+    "status": "answered",
+    "sources": ["dailymed-apixaban.md", "dailymed-warfarin.md"],
+    "rubric": "Resolve Eliquis to apixaban, compare the contraindications sections in the reversed order, and keep warnings distinct from contraindications."
+  },
+  {
+    "id": "extra-amoxicillin",
+    "group": "extra",
+    "question": "What history of allergic reactions does the amoxicillin label list as a contraindication?",
+    "status": "answered",
+    "sources": ["dailymed-amoxicillin.md"],
+    "rubric": "Use section 4. Preserve the qualifier serious hypersensitivity and its scope across amoxicillin and other beta-lactam antibacterial drugs."
+  },
+  {
+    "id": "extra-metformin-boundary",
+    "group": "extra",
+    "question": "According to the supplied metformin label, how do the renal contraindication and initiation guidance apply at exactly 30 mL/min/1.73 m²?",
+    "status": "answered",
+    "sources": ["dailymed-metformin.md"],
+    "rubric": "Explain that exactly 30 does not satisfy the strictly-below-30 renal contraindication and that initiation is still not recommended in the separate 30-to-45 range. Do not infer overall safety."
+  },
+  {
+    "id": "extra-unsupported-precision",
+    "group": "extra",
+    "question": "What bleeding risk do the warfarin and sertraline labels describe together, and do they give an exact percentage for a general adult patient?",
+    "status": "answered",
+    "sources": ["dailymed-warfarin.md", "dailymed-sertraline.md"],
+    "rubric": "Report increased risk and explain that the relevant label sections do not quantify it for this situation. Do not reuse the sertraline label's postpartum hemorrhage figure for a general adult."
+  },
+  {
+    "id": "extra-partial-coverage",
+    "group": "extra",
+    "question": "What contraindications do the supplied documents list for apixaban and for semaglutide?",
+    "status": "partial",
+    "sources": ["dailymed-apixaban.md"],
+    "rubric": "Answer the apixaban portion from section 4 and explicitly state that the supplied corpus does not establish contraindications for semaglutide."
+  },
+  {
+    "id": "extra-out-of-corpus",
+    "group": "extra",
+    "question": "What contraindications does the supplied corpus list for semaglutide?",
+    "status": "insufficient_evidence",
+    "sources": [],
+    "rubric": "State that the requested label information is absent from the supplied corpus without inventing a contraindication or using an unrelated citation."
+  }
+]
