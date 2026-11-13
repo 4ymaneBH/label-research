@@ -1,0 +1,21 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+.env.*
+!.env.example
+assignment-pharma.pdf
+.dist/
+tmp/
+.pytest_cache/
+.ruff_cache/
+evals/latest.json
+evals/report.json
+COMMIT_PLAN.local.md
